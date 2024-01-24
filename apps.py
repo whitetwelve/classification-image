@@ -31,7 +31,7 @@ if option == "Upload Image":
         st.image(image, caption="Uploaded Image", use_column_width=True)
 
         # Preprocess the image
-        image = np.array(image.resize((190, 190))) / 255.0
+        image = np.array(image.resize((200, 200))) / 255.0
         image = np.expand_dims(image, axis=0)
 
         # Make predictions
@@ -67,7 +67,7 @@ elif option == "Capture from Camera":
         st.image(frame_rgb, channels="RGB", use_column_width=True, caption="Camera Capture")
 
         # Preprocess the captured frame
-        resized_frame = cv2.resize(frame_rgb, (190, 190)) / 255.0
+        resized_frame = cv2.resize(frame_rgb, (200, 200)) / 255.0
         image = np.expand_dims(resized_frame, axis=0)
 
         # Make predictions
