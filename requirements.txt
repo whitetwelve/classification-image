@@ -8,3 +8,4 @@ pathlib
 scikit-learn
 Pillow
 uuid
+gdown
