@@ -1,0 +1,4 @@
+0 gajah 
+1 harimau 
+2 singa 
+3 zebra
