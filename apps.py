@@ -8,12 +8,12 @@ import gdown
 
 file_id='1Ox2Cfhsq44Ioko9j3kGLvnavkTliWwpg'
 url = f'https://drive.google.com/uc?id={file_id}'
-
+output = "animal-image-classification2.h5"
+gdown.download(url, output, quiet=False)
+model_path = "animal-image-classification2.h5"
 # Load the trained TensorFlow model
-model_path = "models/animal-image-classification2.h5"
 model = tf.keras.models.load_model(model_path)
 
-gdown.download(url, output, quiet=False)
 
 # Load the labels
 class_labels = open("labels.txt", "r").readlines()
