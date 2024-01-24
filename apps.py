@@ -4,12 +4,16 @@ import cv2
 import tensorflow as tf
 from PIL import Image
 import uuid
+import gdown
 
-
+file_id='1Ox2Cfhsq44Ioko9j3kGLvnavkTliWwpg'
+url = f'https://drive.google.com/uc?id={file_id}'
 
 # Load the trained TensorFlow model
 model_path = "models/animal-image-classification2.h5"
 model = tf.keras.models.load_model(model_path)
+
+gdown.download(url, output, quiet=False)
 
 # Load the labels
 class_labels = open("labels.txt", "r").readlines()
